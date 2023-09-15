@@ -12,6 +12,20 @@ const loadImages = (images, conteiner) =>{
     images.forEach(image => {
         conteiner.innerHTML += `<div class='item'>
         <img src='${image.url}'>
-        </div>`
+        </div>
+        `
     })
 }
+loadImages(imagens, conteinerItens);
+let items = document.querySelectorAll('.item');
+const previous = () => {
+    conteinerItens.appendChild(items[0]);
+    items = document.querySelectorAll('.items');
+}
+const next = () =>{
+    const lastItem =  items[items.length - 1];
+    conteinerItens.insertBefore( lastItem, items[0]);
+    items = document.querySelectorAll('click', next);
+}
+document.querySelector('#previuos').addEventListener('click', previous)
+document.querySelector('#')
